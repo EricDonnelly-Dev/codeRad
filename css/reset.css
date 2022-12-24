@@ -96,6 +96,18 @@ padding:0.475rem 1.75rem;
 }
 .bg-contrast{
     background-color: var(--contrast);
+    padding: var(--size-150) 0;
+    margin: 0 auto;
+}
+.bg-footer{
+    background-color: var(--footer);
+    padding: var(--size-150) 0;
+    margin: 0 auto;
+}
+.bg-footer-base{
+    background-color: var(--footer-base);
+    padding: var(--size-150) 0;
+    margin: 0 auto;
 }
 
 
@@ -105,5 +117,9 @@ padding:0.475rem 1.75rem;
 
 @media (min-width: 1200px) {
 .container{max-width: 1140px}
+
+}
+@media (min-width: 765px) {
+    .container-s {max-width: 720px}
 
 }
