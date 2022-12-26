@@ -25,6 +25,7 @@
     --size-150:9.375rem;
 
 }
+html{scroll-behavior: smooth}
 body{
  font-family: "Open Sans",sans-serif;
  font-weight: 400;
@@ -101,13 +102,11 @@ padding:0.475rem 1.75rem;
 }
 .bg-footer{
     background-color: var(--footer);
-    padding: var(--size-150) 0;
-    margin: 0 auto;
+
 }
 .bg-footer-base{
     background-color: var(--footer-base);
-    padding: var(--size-150) 0;
-    margin: 0 auto;
+    width: 100%;
 }
 
 
@@ -115,11 +114,15 @@ padding:0.475rem 1.75rem;
 
 
 
+@media (min-width: 768px) {
+    .container-s,.footer-bottom-wrapper {max-width: 720px}
+
+}
+@media(min-width: 1024px) {
+    footer .container{max-width: 992px;}
+}
 @media (min-width: 1200px) {
 .container{max-width: 1140px}
-
 }
-@media (min-width: 765px) {
-    .container-s {max-width: 720px}
 
-}
+
