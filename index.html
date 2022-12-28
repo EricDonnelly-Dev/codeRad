@@ -16,7 +16,7 @@
 </head>
 <body>
 <div id="pageTop"></div>
-    <nav class="nav-bar nav">
+    <nav class="nav-bar nav" id="topNav">
         <div class="container">
             <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarDropdown">
                 <span>&#9776</span>
@@ -35,8 +35,7 @@
             <div class="hero-wrapper">
                 <h2 class="hero-header">Young in our Spirits and<br> modern look</h2>
                 <a class="btn btn-white" href="#">Learn More</a>
-            </div>
-
+            </div>6
         </div>
     </header>
 
@@ -50,8 +49,8 @@
                 <a class="btn btn-blue" href="#">Learn More</a>
             </div>
             <div>
-            <img src="assets/images/image2.svg" alt="icon charts"></div>
-
+                <img src="assets/images/image2.svg" alt="icon charts">
+            </div>
         </div>
     </section>
 
@@ -131,7 +130,8 @@
             <h2>Choose the Right Package</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Delectus enim ipsam labore quis voluptates. Sint?</p>
         </div>
-        <div class="container-s price-table">
+        <div class="container">
+        <div class=" price-table">
             <div class="price-card">
                 <h3>Basic</h3>
                 <span class="price-line">$99.99</span>
@@ -139,20 +139,20 @@
                 <hr>
                 <ul>
                     <li><span class="feature-item" >Community Support</span>
-                        <span class="icon">&check;</span></li>
+                        <span class="icon"><i class="fa-regular fa-square-check"></i></span></li>
                     <li>
                         <span class="feature-item" >Flexible simple licence</span>
-                        <span class="icon">&check;</span>
+                        <span class="icon"><i class="fa-regular fa-square-check"></i></span>
                     </li>
                     <li>
                         <span class="feature-item" >100+ Styled Components</span>
-                        <span class="icon">&#10761;</span>
+                        <span class="icon"><i class="fa-regular fa-rectangle-xmark"></i></span>
                     </li>
                     <li> <span class="feature-item" >100+ Header Variations
                     </span>
-                        <span class="icon">&#10761;</span></li>
+                        <span class="icon"><i class="fa-regular fa-rectangle-xmark"></i></span></li>
                     <li><span class="feature-item" >Speedy Build Tooling</span>
-                        <span class="icon">&#10761;</span></li>
+                        <span class="icon"><i class="fa-regular fa-rectangle-xmark"></i></span></li>
                 </ul>
             </div>
 
@@ -163,24 +163,24 @@
                 <hr>
                 <ul>
                     <li><span class="feature-item" >Community Support</span>
-                        <span class="icon checked">&check;</span></li>
+                        <span class="icon checked"><i class="fa-regular fa-square-check"></i></span></li>
                     <li>
                         <span class="feature-item" >Flexible simple licence</span>
-                        <span class="icon checked">&check;</span>
+                        <span class="icon checked"><i class="fa-regular fa-square-check"></i></span>
                     </li>
                     <li>
                         <span class="feature-item" >100+ Styled Components</span>
-                        <span class="icon checked">&check;</span>
+                        <span class="icon checked"><i class="fa-regular fa-square-check"></i></span>
                     </li>
                     <li> <span class="feature-item" >100+ Header Variations
                     </span>
-                        <span class="icon times">&#10761;</span></li>
+                        <span class="icon times"><i class="fa-regular fa-rectangle-xmark"></i></span></li>
                     <li><span class="feature-item" >Speedy Build Tooling</span>
-                        <span class="icon times">&#10761;</span></li>
-                    <li class="plan-btn-wrapper">
-                        <a href="" class="btn btn-blue">Learn More</a>
-                    </li>
+                        <span class="icon times"><i class="fa-regular fa-rectangle-xmark"></i></span></li>
                 </ul>
+                <div class="plan-btn-wrapper">
+                    <a href="" class="btn btn-blue">Get Started</a>
+                </div>
             </div>
 
             <div class="price-card">
@@ -190,25 +190,26 @@
                 <hr>
                 <ul>
                     <li><span class="feature-item" >Community Support</span>
-                        <span class="icon">&check;</span></li>
+                        <span class="icon"><i class="fa-regular fa-square-check"></i></span></li>
                     <li>
                         <span class="feature-item" >Flexible simple licence</span>
-                        <span class="icon">&check;</span>
+                        <span class="icon"><i class="fa-regular fa-square-check"></i></span>
                     </li>
                     <li>
                         <span class="feature-item" >100+ Styled Components</span>
-                        <span class="icon">&check;</span>
+                        <span class="icon"><i class="fa-regular fa-square-check"></i></span>
                     </li>
                     <li> <span class="feature-item" >100+ Header Variations
                     </span>
-                        <span class="icon">&check;</span></li>
+                        <span class="icon"><i class="fa-regular fa-square-check"></i></span></li>
                     <li><span class="feature-item" >Speedy Build Tooling</span>
-                        <span class="icon">&check;</span></li>
+                        <span class="icon"><i class="fa-regular fa-square-check"></i></span></li>
                 </ul>
             </div>
-        </div>
+        </div></div>
 </section>
-    <section class="container-s testimonials">
+    <section class=" testimonials">
+        <div class="container">
         <div class="block-text">
             <h2>What are people saying?</h2>
         </div>
@@ -255,7 +256,9 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
+
     <footer class="bg-footer">
         <div class="container">
             <section class="footer-top">
@@ -336,5 +339,23 @@
     <a href="#pageTop" id="scrollUp">
         <i class="fa-solid fa-arrow-up"></i>
     </a>
+<script>
+    const nav = document.getElementById("topNav");
+    window.onscroll = function (){
+        if(window.pageYOffset >100){
+            nav.classList.add("sticky");
+        }else{
+            nav.classList.remove("sticky");
+        }
+    }
+
+    const navButton = document.querySelector("button[aria-expanded]");
+    function toggleNav({target}){
+        const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+        navButton.setAttribute('aria-expanded',!expanded);
+
+    }
+    navButton.addEventListener('click',toggleNav);
+</script>
 </body>
 </html>
